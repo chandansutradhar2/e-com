@@ -40,11 +40,13 @@ export class UserService {
         }
     }
 
+    async updateRefreshToken(userId:string,refreshToken:string ){
+        console.log('userId=>',userId,'refreshToken=>',refreshToken)
+        return await this.userRepo.updateRefreshToken(userId,refreshToken);
+    }
     
-    byId(id: string) {
-        return new Promise((resolve, reject) => {
-
-        })
+    async byId(id: string) {
+        return await this.userRepo.findUserById(id);    
     }
 
     byEmail(email: string) {

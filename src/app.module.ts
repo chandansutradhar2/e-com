@@ -10,6 +10,7 @@ import { ConfigModule } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { AccessTokenStrategy } from './strategies/access-token.strategy';
 import { RefreshTokenStrategy } from './strategies/refresh-token.strategy';
+import { VendorModule } from './vendor/vendor.module';
 
 
 @Module({
@@ -26,8 +27,9 @@ import { RefreshTokenStrategy } from './strategies/refresh-token.strategy';
   }),
     JwtModule.register({
     secret:process.env.JWT_SECRET,
+    
   }),
-    CatalogModule, OrderModule, AuthModule, UserModule],
+    CatalogModule, OrderModule, AuthModule, UserModule, VendorModule],
   controllers: [AppController],
   providers: [AppService,AccessTokenStrategy, RefreshTokenStrategy],
 })
