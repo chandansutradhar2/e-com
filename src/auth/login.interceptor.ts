@@ -19,9 +19,7 @@ export class LoginInterceptor implements NestInterceptor {
 
         return next
             .handle()
-            .pipe(
-                tap(() => console.log(request)),
-            );
+            
 
         //suneel ..mcc code and invoice in pdf
 

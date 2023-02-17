@@ -1,16 +1,20 @@
-import { Controller, Post, Get, Body, Param, Session, UseInterceptors } from '@nestjs/common';
-import { UserService } from 'src/user/user.service';
+import { Controller, Post, Get, Body, Param, Session, UseInterceptors, Req, UseGuards } from '@nestjs/common';
+import { Request } from 'express';
+
 import { LoginInterceptor } from './login.interceptor';
 import { AuthService } from './auth.service';
 import { LoginDTO } from './dtos/login.dto';
 import { CreateUserDTO } from 'src/user/dtos/create-user.dto';
 import { User } from 'src/entities/user.entity';
+import { AccessTokenGuard } from 'src/guards/access-token.guard';
+import { RefreshTokenGuard } from 'src/guards/refresh-token.guard';
 
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) { }
 
   @UseInterceptors(LoginInterceptor)
+
   @Post('/signin')
   async signIn(@Body() body: LoginDTO) {
     return body.email ? await this.authService.loginWithEmail(body.email, body.password) : await this.authService.loginWithMobileNo(body.mobileNo, body.password);
@@ -33,18 +37,25 @@ export class AuthController {
     return await this.authService.signUp(userEntity);
   }
 
-  @Get()
-  signOut() {
+  @UseGuards(AccessTokenGuard)
+  @Get('/signout')
+  signOut(@Req() req: Request) {
+    this.authService.signOut(req.user['sub'],null);
 
   }
 
-  @Get('/currentuser')
-  getCurrentUser() {
-
+  @UseGuards(RefreshTokenGuard)
+  @Get('/refresh')
+  async refreshTokens(@Req() req: Request) {
+    console.log(req.user)
+    const userId = req.user['sub'];
+    const refreshToken = req.user['refreshToken'];
+    return await this.authService.refreshTokens(userId, refreshToken);
   }
-
-  @Post('validate')
-  async validate(@Body() body: LoginDTO) {
-    return await this.authService.validateUser(body.mobileNo, body.email, body.password)
+  
+  @UseGuards(AccessTokenGuard)
+  @Get('/protected')
+  async protectedRoute(){
+    return "protected route test"
   }
 }
