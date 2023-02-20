@@ -11,6 +11,8 @@ import { JwtModule } from '@nestjs/jwt';
 import { AccessTokenStrategy } from './strategies/access-token.strategy';
 import { RefreshTokenStrategy } from './strategies/refresh-token.strategy';
 import { VendorModule } from './vendor/vendor.module';
+import { ClientModule } from './client/client.module';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 
 
 @Module({
@@ -25,11 +27,19 @@ import { VendorModule } from './vendor/vendor.module';
     username: process.env.NEO4J_USERNAME,
     password: process.env.NEO4J_PASSWORD,
   }),
+  ClientsModule.register([
+    {
+      name:'NOTIFICATION_SVC',
+      transport:Transport.TCP,
+      options:{
+      port:3001
+     } 
+    }
+  ]),
     JwtModule.register({
-    secret:process.env.JWT_SECRET,
-    
+    secret:process.env.JWT_SECRET,    
   }),
-    CatalogModule, OrderModule, AuthModule, UserModule, VendorModule],
+    CatalogModule, OrderModule, AuthModule, UserModule, VendorModule,],
   controllers: [AppController],
   providers: [AppService,AccessTokenStrategy, RefreshTokenStrategy],
 })

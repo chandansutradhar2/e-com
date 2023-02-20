@@ -13,7 +13,7 @@ export class VendorController {
     return this.vendorService.create(createVendorDto);
   }
 
-  @UseGuards(VendorAuthGuard)
+  @UseGuards(new VendorAuthGuard())
   @Get()
   findAll() {
     return this.vendorService.findAll();

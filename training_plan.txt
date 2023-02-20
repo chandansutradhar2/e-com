@@ -3,3 +3,15 @@
 16- auth,interceptors/decorator
 17- rdbms
 18-authorization and encryption
+19- microservice implementation (url link: https://github.com/chandansutradhar2/notification-svc)
+20- Caching
+21- Queues/Logging and Cookies
+22 Server session 
+23-  fle handling and streaming
+24- server side event based processing 
+25- GraphQL
+26- Websocket
+27- Websocket
+28- testing 
+29- recap
+30- assessment

@@ -1,4 +1,6 @@
 import { Injectable, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { VendorAuthGuard } from 'src/guards/vendor.guard';
 import { CreateVendorDto } from './dto/create-vendor.dto';
 import { UpdateVendorDto } from './dto/update-vendor.dto';
 
@@ -9,6 +11,7 @@ export class VendorService {
   }
 
   
+  @UseGuards(new VendorAuthGuard())
   findAll() {
     return `This action returns all vendor`;
   }

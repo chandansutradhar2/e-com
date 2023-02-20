@@ -1,23 +1,27 @@
-import { BadRequestException, HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { BadRequestException, HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
 import { scrypt as _ascrypt, randomBytes } from 'crypto'
 import { Neo4jService } from 'nest-neo4j/dist';
 import { User } from 'src/entities/user.entity';
 import { UserRepo } from './user.repo';
 import { promisify } from 'util';
+import { ClientProxy, ClientsModule } from '@nestjs/microservices';
+import { UserCreatedEvent } from 'src/events/user_created.event';
 
 const scrypt = promisify(_ascrypt);
 
 
 @Injectable()
 export class UserService {
-    constructor(private neo: Neo4jService, private userRepo: UserRepo) {
+    constructor(@Inject('NOTIFICATION_SVC') private readonly notificationSvc:ClientProxy, private neo: Neo4jService, private userRepo: UserRepo) {
     }
 
-    async findAll(): Promise<any> {
+    async findAll(): Promise<User[]> {
         return new Promise((resolve, reject) => {
             this.neo.read(`MATCH (n:User) return n`).then((result) => {
-                console.log(result.summary)
-                resolve(result.records)
+                console.log(result.summary);
+                let users:User[]=[];
+                result.records.map((row)=>users.push(row.get('n').properties));
+                resolve(users);
             })
         })
     }
@@ -32,9 +36,18 @@ export class UserService {
             const result = salt + '.' + hash.toString('hex');
             user.password = result;
             
+           const res= await this.userRepo.createUser(user);
 
-            return await this.userRepo.createUser(user);
-            
+           this.notificationSvc.emit('USER_CREATED',new UserCreatedEvent({
+            createdBy:user.userId,
+            createdOn:Date.now(),
+            createrName:user.firstName+"."+user.lastName,
+            destinationIp:'na',
+           })) 
+           
+           console.log(this.notificationSvc);
+           return res;
+
         } catch (error) {
             throw new HttpException({ reason: error }, HttpStatus.SERVICE_UNAVAILABLE);
         }

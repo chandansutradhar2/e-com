@@ -46,21 +46,21 @@ export class AuthService {
             return new NotFoundException()
         }
         console.log('newUser',newUser)
-        const tokens=await this.generateToken(newUser[0].userId);
-        const res=await this.refreshTokens(newUser[0].userId,tokens.refreshToken);
+        const tokens=await this.generateToken(newUser[0]);
+        const res=await this.updateRefreshToken(newUser[0].userId,tokens.refreshToken);
         console.log(res);
+        
         return tokens;  
-
-
     }
 
     async generateToken(user:User){
-        const [accessToken,refreshToken]=await Promise.all([
-            
+      user.password=null;  
+      const [accessToken,refreshToken]=await Promise.all([
+          
             this.jwtService.signAsync(
                 {
                   sub: user.userId,
-                user:user
+                 user:user
                 },
                 {
                   secret: 'WwBW3LEuwFodloQs14Y83+u9N/F5AzWrdmoyCHQ9tEsz6iBQfh8HRUS+TwQ/cBhfJPCZPw8usVqP3llPxYEsM4yJjjnvvnWLG3MDBjieoONXXOBPxdXPpQOt2DSddICUn8TpCszqLTrgEvNUK9rvwk0arKtrVoVb+pWtlR7ojYUVAGcXOyOQvMRCLHl5zkURR1yKkasn+++mEFkjSuA61rNIDZ0dRdX2x6G8uRvnRZZAbXhp/Gqe9O+/vPObN1v2ZoLAMlrpJM9HCaejOhS/ENRATuXW3ILu0PkI+Wy5XmybGSw7u2yGuXtkfoSBUiDZjgRFMO5Um2fpTLFzjPCt/Q==',

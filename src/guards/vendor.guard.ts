@@ -14,11 +14,9 @@ export class VendorAuthGuard implements CanActivate {
     if(request.headers.authorization){
 
         const [text,token]=request.headers.authorization.split(" ");
-        // const payload=this.jwtSvc.decode(token,{
-        //     json:true
-        // })
-        // console.log('from vendorauthguard', payload)
+        console.log(token)
+        //todo validate token
     }        
-    return true;
+    return false;
   }
 }
