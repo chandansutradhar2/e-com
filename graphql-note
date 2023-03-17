@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-17T05:42:13.064Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="BJtLnkTX0PxfMO4vuKDO" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-17T05:46:16.558Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="gVQ3r4P7ycuAccUYtI58" version="21.0.6" type="github">
   <diagram name="Page-1" id="e9UEediOB2uXJuW6cY4H">
     <mxGraphModel dx="880" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -24,8 +24,47 @@
         <mxCell id="FizQlyduJa-ubbeXS_ai-3" value="webapp" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="450" y="50" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="FizQlyduJa-ubbeXS_ai-6" target="FizQlyduJa-ubbeXS_ai-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="FizQlyduJa-ubbeXS_ai-6" target="FizQlyduJa-ubbeXS_ai-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="FizQlyduJa-ubbeXS_ai-6" value="NestJS -&amp;gt; Express-&amp;gt; Apollo&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
           <mxGeometry x="235" y="410" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-7" value="code first" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
+          <mxGeometry x="115" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-9" value="schema first" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
+          <mxGeometry x="500" y="560" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="FizQlyduJa-ubbeXS_ai-11" target="FizQlyduJa-ubbeXS_ai-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="FizQlyduJa-ubbeXS_ai-11" target="FizQlyduJa-ubbeXS_ai-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="FizQlyduJa-ubbeXS_ai-11" target="FizQlyduJa-ubbeXS_ai-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-11" value="graphQL" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="790" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-12" value="SDL (Schema defination language)" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
+          <mxGeometry x="745" y="460" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=16;" edge="1" parent="1" source="FizQlyduJa-ubbeXS_ai-14" target="FizQlyduJa-ubbeXS_ai-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-14" value="SQL Server" style="rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-15" value="SQL" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FizQlyduJa-ubbeXS_ai-18" value="mongodb" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
+          <mxGeometry x="790" y="170" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
