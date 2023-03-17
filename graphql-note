@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-17T06:27:21.459Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="hNPW9jlkhoOy2fr4XViW" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-17T06:30:08.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="HrHfszMU7m5ftA-2f4Xq" version="21.0.6" type="github">
   <diagram name="Page-1" id="e9UEediOB2uXJuW6cY4H">
     <mxGraphModel dx="838" dy="423" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -134,7 +134,7 @@
         <mxCell id="FizQlyduJa-ubbeXS_ai-37" value="Query" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
           <mxGeometry x="730" y="760" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="FizQlyduJa-ubbeXS_ai-40" value="Mutation" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
+        <mxCell id="FizQlyduJa-ubbeXS_ai-40" value="Mutation&lt;br&gt;Create,Update.Delete" style="whiteSpace=wrap;html=1;fontSize=20;fontFamily=Architects Daughter;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
           <mxGeometry x="890" y="760" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
